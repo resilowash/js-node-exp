@@ -3,6 +3,13 @@ var Person = function(firstName, lastName, birthYear, email) {
   this.lastName = lastName;
   this.birthyear = birthYear;
   this.email = email;
+  this.introduceSelf = function() {
+    return "Hello, my name is " + this.firstName + " " + this.lastName;
+  };
 }
 
-module.exports = Person; 
+Person.prototype.question = function(name) {
+  return "Hello " + name + ", how can I help you?";
+}
+
+module.exports = Person;
